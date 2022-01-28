@@ -28,7 +28,7 @@ pipeline {
         stage('deploy to apache server') {
             steps {
              
-               deploy adapters: [tomcat9(credentialsId: 'tomcat', path: '', url: ' http://52.140.1.81:8080/')], contextPath: 'rps', war: '**/*.war'
+               deploy adapters: [tomcat9(credentialsId: 'tomcat', path: '', url: ' http://52.140.1.81:8080/')], contextPath: 'rps', war: 'target/*.war'
             }
             
         }
